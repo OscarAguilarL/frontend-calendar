@@ -1,0 +1,12 @@
+.App {
+  block-size: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-left {
+  min-inline-size: 31.25rem;
+  min-block-size: 25rem;
+  background-color: var(--black);
+}
