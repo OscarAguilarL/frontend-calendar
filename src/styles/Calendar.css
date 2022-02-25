@@ -5,8 +5,8 @@ abbr {
 
 .calendar {
   font-family: 'Inter', sans-serif;
-  min-inline-size: 31.25rem;
-  min-block-size: 25rem;
+  min-inline-size: var(--min-inline-size);
+  min-block-size: var(--min-block-size);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,7 @@ abbr {
 .react-calendar__tile {
   font: var(--desktop-body2-regular);
   padding: 10px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .react-calendar__tile--active,

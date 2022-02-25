@@ -1,13 +1,19 @@
+:root {
+  --min-inline-size: 31.25rem;
+  --min-block-size: 25rem;
+}
+
 .App {
   block-size: 98vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .calendar-left {
-  min-inline-size: 31.25rem;
-  min-block-size: 25rem;
+  min-inline-size: var(--min-inline-size);
+  min-block-size: var(--min-block-size);
   background-color: var(--black);
 }
 
@@ -20,7 +26,7 @@
 
 .calendarLeft-day {
   font: var(--desktop-h1);
-  line-height: .2rem;
+  line-height: 0.2rem;
 }
 
 .calendarLeft-date {
@@ -32,4 +38,21 @@
 
 .separator {
   font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --min-inline-size: 22.5rem;
+    --min-block-size: 20.75rem;
+  }
+
+  .calendarLeft-day {
+    font-weight: normal;
+  }
 }
