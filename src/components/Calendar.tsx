@@ -1,28 +1,15 @@
-import { useState } from 'react'
 import ReactCalendar from 'react-calendar'
+import { monthNames } from '../constants'
 
 import '../styles/Calendar.css'
 
-const monthNames: string[] = [
-  'Enero',
-  'Febrero',
-  'Marzo',
-  'Abril',
-  'Mayo',
-  'Junio',
-  'Julio',
-  'Agosto',
-  'Septiembre',
-  'Octubre',
-  'Noviembre',
-  'Diciembre',
-]
-
-export const Calendar = () => {
-  const [date, setDate] = useState<Date>(new Date())
-
-  console.log(date)
-
+export const Calendar = ({
+  date,
+  setDate,
+}: {
+  date: Date
+  setDate: React.Dispatch<React.SetStateAction<Date>>
+}) => {
   return (
     <ReactCalendar
       className="calendar"

@@ -10,3 +10,26 @@
   min-block-size: 25rem;
   background-color: var(--black);
 }
+
+.calendar-left {
+  color: white;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.calendarLeft-day {
+  font: var(--desktop-h1);
+  line-height: .2rem;
+}
+
+.calendarLeft-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font: var(--desktop-h5-medium);
+}
+
+.separator {
+  font-size: 3rem;
+}
